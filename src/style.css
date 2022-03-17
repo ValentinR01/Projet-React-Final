@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@300&display=swap');
+
+.header {
+    width: 100vw;
+    height: 27vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+}
+
+.createTodo {
+    width: 280px;
+    height: 52%;
+    padding: 12px 20px;
+    display:inline-block;
+    background: linear-gradient(109.23deg, rgba(52, 88, 141, 0.99) 18.15%, rgba(136, 143, 155, 0.78) 129.25%);
+    border-radius: 7px;
+}
+
+input {
+    font-family: Righteous;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.createTodo > button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 4px 8px;
+    font-family: 'Righteous';
+    color: white;
+    border-radius: 5px;
+}
+
+
+textarea, input { 
+    outline: none; 
+    color: white;
+}
+
+.deleteButton {
+
+}
+
+textarea::placeholder, input::placeholder { 
+    color: #DFDEDE; 
+}
+textarea {
+    width: 100%;
+}
+
+input.taskName, textarea.taskDescription {
+    background: none;
+    border: none;
+    color: white;
+    
+}
+
+input.taskName, textarea.taskDescription {
+    display: block;
+    
+}
+
+.Todolist {
+    margin-top: 2vh;
+    margin: 2vh 5vw;
+}
+
+h2 {
+    margin-bottom: 2vh;
+    font-size: 36px;
+    font-family: Righteous;
+    color: #5C5C5C;
+}
+
+.cardContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%; 
+    grid-column-gap: 5vw;
+    height: 10vh;
+}
+
+.card {
+    background-color: #F6F2F2;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card > h5 {
+    font-family: 'Righteous';
+    font-size: 15px;
+    color: #515151;
+}
+
+.card > p {
+    margin-top: 0.1vh;
+    font-family: 'Rosario';
+    font-weight: 300;
+    font-size: 13px;
+}
