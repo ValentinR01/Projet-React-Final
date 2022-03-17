@@ -19,7 +19,7 @@ export default class Form extends Component {
 
     handleSubmit(event){
         event.preventDefault();
-        console.log(this.props.cards.length)
+        // Check du nombre de cards déjà présentes
         if(this.props.cards.length >=10 ){
                 alert("Veuillez complèter les todos avant d'en rajouter d'autres")
             }
