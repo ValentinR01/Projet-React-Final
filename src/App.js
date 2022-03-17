@@ -10,13 +10,13 @@ function App() {
     {
       id: 1,
       titre: "Faire mon projet React",
-      message: "A terminer pour jeudi"
+      message: "A terminer pour jeudi",
     }
   ])
 
     return (
       <div className="container">
-        <Form setCards={setCards}/>
+        <Form setCards={setCards} cards={cards} />
         <Todolist cards={cards} setCards={setCards}/>
         </div>
       );

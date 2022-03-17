@@ -51,9 +51,7 @@ textarea, input {
     color: white;
 }
 
-.deleteButton {
 
-}
 
 textarea::placeholder, input::placeholder { 
     color: #DFDEDE; 
@@ -89,8 +87,9 @@ h2 {
 .cardContainer {
     display: grid;
     width: 100%;
-    grid-template-columns: 33% 33% 33%; 
-    grid-column-gap: 5vw;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 2vh;
     height: 10vh;
 }
 
@@ -98,6 +97,7 @@ h2 {
     background-color: #F6F2F2;
     border-radius: 5px;
     padding: 10px;
+    height: 8vh;
 }
 
 .card > h5 {

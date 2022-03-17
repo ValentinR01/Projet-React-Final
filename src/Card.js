@@ -7,7 +7,8 @@ export default function Card({titre, message, id, deleteCard}) {
             <div className="card" key={id}>
                 <h5>{titre}</h5>
                 <p>{message}</p>
-                <button className='deleteButton' id={id}  onClick={() => deleteCard(id)}>Delete</button>
+                <button className='deleteButton' onClick={() => deleteCard(id)}>Delete</button>
+                <button className='markCompleted' onClick={() => deleteCard(id)}>Delete</button>
             </div>
         )
 }

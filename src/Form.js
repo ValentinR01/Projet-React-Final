@@ -5,16 +5,7 @@ import { v4 as uuid } from 'uuid';
 
 export default class Form extends Component {
     setCards = this.props.setCards;
-
-    handleSubmit(event){
-        event.preventDefault();
-        const newItem = {
-            id: uuid(),
-            titre: this.state.title,
-            message: this.state.message
-        };
-        this.setCards(prev=>[...prev, newItem]);
-    };
+    cards = this.props.cards;
 
     constructor(props){
         super(props);
@@ -25,6 +16,29 @@ export default class Form extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleSubmit(event){
+        event.preventDefault();
+        console.log(this.props.cards.length)
+        if(this.props.cards.length >=10 ){
+                alert("Veuillez complèter les todos avant d'en rajouter d'autres")
+            }
+        else if(this.state.title === '') {
+            alert('Veuillez rentrer un titre')
+
+        }
+        else {
+            const newItem = {
+                id: uuid(),
+                titre: this.state.title,
+                message: this.state.message
+                }; 
+             this.setCards(prev=>[...prev, newItem]);
+        }    
+    };
+
+
+    
     getTitle = (e) => {
         this.setState({title: e.target.value});
     }
